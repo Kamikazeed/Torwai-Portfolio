@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wdth,wght@62.5..100,100..900&family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #DAEDFF;
+  --color-secondary: #AED8FF;
+  --color-primary-bg: #1A1C20;
+  --color-secondary-bg: #373C43;
+  --color-border: #404C72;
+  --color-blue: #69D9FE;
+  --color-pink: #FD3DF5;
+  --color-linear: #FD3DF5 27%, #69D9FE 100%;
+}
+
+* {
+  font-family: "Outfit", sans-serif;
+}
+
+.thai {
+  font-family: "Noto Sans Thai", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background: #1A1C20;
+  height: 100vh;
+}
+
+section {
+  scroll-margin-top: 72px;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1A1C20 inset !important;
+  -webkit-text-fill-color: #AED8FF !important;
+}
+
+.button-line:hover::after {
+  width: 100%;
+}
+
+.button-line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #69D9FE;
+  transition: 0.2s;
+}
+
+.section-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.section-line::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  width: 100%;
+  background: #404C72;
+}
+
+.gradient-text {
+  color: transparent;
+  background-size: 200%;
+  animation: gradientMove 5s linear infinite;
+}
+
+.slide-bar {
+  position: relative;
+}
+
+.slide-bar::before, .slide-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 4rem;
+  z-index: 1;
+}
+
+.slide-bar::before {
+  left: 0;
+  background-image: linear-gradient(90deg, #1A1C20 0%, #1a1c20b0 70%,  #1a1c2000 100%);
+}
+
+.slide-bar::after {
+  right: 0;
+  background-image: linear-gradient(270deg, #1A1C20 0%, #1a1c20b0 70%,  #1a1c2000 100%);
+}
+
+.slide-bar ul {
+  animation: slideMove 15s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0 center;
+  } 100% {
+    background-position: -200% center;
+  }
+}
+
+@keyframes slideMove {
+  0% {
+    transform: translateX(0);
+  } 100% {
+    transform: translateX(-50%);
+  }
+}
