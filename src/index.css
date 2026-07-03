@@ -30,6 +30,12 @@ section {
   scroll-margin-top: 72px;
 }
 
+.primary-border {
+  border-width: 2px;
+  border-radius: 8px;
+  border-color: #404C72;
+}
+
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px #1A1C20 inset !important;
   -webkit-text-fill-color: #AED8FF !important;

@@ -19,11 +19,12 @@ const Home = () => {
     if (location.hash) {
       const id = location.hash.replace('#', '');
 
-      setTimeout(() => {
+      requestAnimationFrame(() => {
         document.getElementById(id)?.scrollIntoView({
           block: 'start',
+          behavior: 'smooth',
         });
-      }, 100)
+      })
     }
   }, [location.hash])
 

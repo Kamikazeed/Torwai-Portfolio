@@ -1,5 +1,5 @@
-import { createContext, useContext, useState, useEffect, useRef } from "react";
-import {useLocation, useNavigate, useParams} from 'react-router-dom';
+import { createContext, useContext, useState, useEffect, useMemo, useCallback } from "react";
+import {useLocation, useNavigate, } from 'react-router-dom';
 
 const AppContext = createContext();
 
@@ -8,31 +8,10 @@ export const AppProvider = ({ children }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [openMenu, setOpenMenu] = useState(false);
   const [isMedium, setIsMedium] = useState(window.matchMedia("(min-width: 768px)").matches)
-  const [section, setSection] = useState('')
+  const [openMenu, setOpenMenu] = useState(false);
 
-  const animateContainer = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.2,
-      }
-    },
-    show2: {
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.5
-      }
-    },
-    show3: {
-      transition: {
-        staggerChildren: 0.1,
-      }
-    },
-  }
-
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = useCallback((sectionId) => {
     if (location.pathname === '/') {
       document.getElementById(sectionId)?.scrollIntoView({
         behavior: 'smooth',
@@ -42,11 +21,7 @@ export const AppProvider = ({ children }) => {
     } else {
       navigate(`/#${sectionId}`);
     }
-
-    setTimeout(() => {
-      setSection('')
-    }, 100)
-  }
+  }, [location.pathname, navigate])
   
   useEffect(() => {
     const screen = window.matchMedia("(min-width: 768px)");
@@ -65,19 +40,12 @@ export const AppProvider = ({ children }) => {
     }
   }, [])
 
-  useEffect(() => {
-    scrollToSection(section)
-  }, [section])
-
-  const value = {
-    openMenu, setOpenMenu,
-    section, setSection,
-    navigate,
+  const value = useMemo(() => ({
     isMedium,
-    animateContainer,
+    openMenu, setOpenMenu,
     scrollToSection,
-  }
-
+  }), [openMenu, scrollToSection, isMedium])
+  
   return (
     <AppContext.Provider value={value}>
       {children}

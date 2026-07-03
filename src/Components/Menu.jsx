@@ -1,28 +1,17 @@
-import React, { useEffect, useState } from 'react'
-import { assets } from '../assets/asset'
+import React from 'react'
+import { assets, navItem } from '../assets/asset'
 import { useAppContext } from '../context/AppContext';
 
 const Menu = () => {
 
-  const {openMenu, setOpenMenu, setSection} = useAppContext();
-  const navItem = [
-    {name: 'Home', id: 'Home'},
-    {name: 'About', id: 'About'},
-    {name: 'Skills', id: 'Skills'},
-    {name: 'Projects', id: 'Projects'},
-    {name: 'Contact', id: 'Contact'}
-  ]
+  const {openMenu, setOpenMenu, scrollToSection} = useAppContext();
 
-    const contact = [
-      {
-        img: assets.facebook_logo,
-        link: 'https://www.facebook.com/phimphabut.torwai'
-      },
-      // {
-      //   img: assets.github_logo,
-      //   link: '',
-      // },
-    ]
+  const contact = [
+    {
+      img: assets.facebook_logo,
+      link: 'https://www.facebook.com/phimphabut.torwai'
+    },
+  ]
 
   return (
     <div className={`fixed h-full w-full top-0 left-0 px-8 z-10 backdrop-blur-xl duration-300 md:hidden ${openMenu ? "translate-none" : "-translate-x-full"} `}>
@@ -40,9 +29,11 @@ const Menu = () => {
       <div className='py-6'>
         <ul className='flex flex-col items-center justify-center gap-3 text-primary text-2xl font-semibold'>
           {navItem.map((item, index) => (
-            <li className='button-line relative cursor-pointer' key={index} onClick={() => {setSection(item.name), setOpenMenu(false)}}>
-              <span>{item.name}</span>
-              <span className='text-blue'>.</span>
+            <li className='button-line relative cursor-pointer' key={index}>
+              <button className='cursor-pointer' onClick={() => {scrollToSection(item.name), setOpenMenu(false)}}>
+                <span>{item.name}</span>
+                <span className='text-blue'>.</span>
+              </button>
             </li>
           ))}
         </ul>
@@ -50,7 +41,8 @@ const Menu = () => {
 
       <div className='flex justify-center items-center gap-3 py-4 border-t-2 border-border'>
         {contact.map((item, index) => (
-          <a className='flex items-center justify-center w-10 h-10 border-2 border-border rounded-md p-[2px] cursor-pointer duration-100 hover:bg-secondary-bg' href={item.link} target='_blank' key={index} dangerouslySetInnerHTML={{__html: item.img}}>
+          <a className='flex items-center justify-center border-2 border-border rounded-md p-[2px] cursor-pointer duration-100 hover:bg-secondary-bg' href={item.link} title='Facebook' aria-label='Facebook' target='_blank' key={index}>
+            <img className='w-10 h-10' src={assets.facebook_logo} alt='facebook' loading='lazy' />
           </a>
         ))}
       </div>
@@ -58,4 +50,4 @@ const Menu = () => {
   )
 }
 
-export default Menu
+export default React.memo(Menu)

@@ -1,36 +1,24 @@
 import React from 'react'
 import { motion } from "motion/react"
 import { useParams } from 'react-router-dom'
-import { projectInfo, buttons } from '../../assets/asset';
-import { useAppContext } from '../../context/AppContext';
+import { projectInfo } from '../../assets/asset';
+import { animateContainer, animation } from '../../utils/animation';
 
 const ProjectInfo = () => {
 
-  const {animateContainer} = useAppContext();
   const {id} = useParams();
   const data = projectInfo[id]
 
-  const list = [
-    {
-      hidden: {opacity: 0, y: 20},
-      show: {opacity: 1, y: 0, transition: {duration: 1}}
-    },
-    {
-      hidden: {opacity: 0, y: 20},
-      show3: {opacity: 1, y: 0, transition: {duration: 1}}
-    },
-  ]
-  
   return (
     <section>
       <div className='pb-15 lg:pb-20'>
         <motion.div
-          variants={animateContainer}
+          variants={animateContainer[0]}
           initial='hidden'
           whileInView='show'
           viewport={{once: true, amount: 'all'}}
         >
-          <motion.div className='section-line' variants={list[0]}>
+          <motion.div className='section-line' variants={animation[1]}>
             <h2 className='text-primary text-2xl font-bold md:text-3xl lg:text-4xl'>
               Feature<span className='text-blue'>.</span>
             </h2>
@@ -40,7 +28,7 @@ const ProjectInfo = () => {
         <ul className='grid grid-cols-1 gap-4 mt-8 md:grid-cols-2 md:mt-12'>
           {data.feature.map((item, index) => (
             <motion.li className='p-4 border-2 border-border rounded-lg' key={index}
-              variants={list[0]}
+              variants={animation[1]}
               initial='hidden'
               whileInView='show'
               viewport={{once: true, amount: 'all'}}
@@ -54,12 +42,12 @@ const ProjectInfo = () => {
 
       <div className='pb-15 lg:pb-20'>
         <motion.div
-          variants={animateContainer}
+          variants={animateContainer[0]}
           initial='hidden'
           whileInView='show'
           viewport={{once: true, amount: 'all'}}
         >
-          <motion.div className='section-line' variants={list[0]}>
+          <motion.div className='section-line' variants={animation[1]}>
             <h2 className='text-primary text-2xl font-bold md:text-3xl lg:text-4xl'>
               Tech Stack<span className='text-blue'>.</span>
             </h2>
@@ -67,14 +55,14 @@ const ProjectInfo = () => {
         </motion.div>
 
         <motion.ul className='flex flex-wrap gap-x-[6px] gap-y-2 mt-8 md:gap-x-2 md:gap-y-3 md:mt-12'
-          variants={animateContainer}
+          variants={animateContainer[2]}
           initial='hidden'
-          whileInView='show3'
+          whileInView='show'
           viewport={{once: true, amount: 'all'}}
         >
           {data.tech.map((tech) => (
-            <motion.li className='flex items-center gap-1 px-[10px] py-[6px] border-2 border-border rounded-lg md:gap-[6px] md:px-3' variants={list[1]} key={tech.name}>
-              <div className='w-5 h-5 md:w-6 md:h-6' dangerouslySetInnerHTML={{__html: tech.icon}}></div>
+            <motion.li className='flex items-center gap-1 px-[10px] py-[6px] border-2 border-border rounded-lg md:gap-[6px] md:px-3' variants={animation[1]} key={tech.name}>
+              <img className='w-5 h-5 md:w-6 md:h-6' alt={tech.name} src={tech.icon} />
               <span className='text-sm text-primary md:text-md'>{tech.name}</span>
             </motion.li>
           ))}
