@@ -1,13 +1,14 @@
 
 import prototype from './Wither.webp';
+import profile from './profile.webp';
 
-const portfolio = 'https://res.cloudinary.com/douxhwl8g/video/upload/v1781009689/portfolioWeb_nctnwy.mp4';
+const portfolio = 'https://res.cloudinary.com/douxhwl8g/video/upload/v1786847198/Screen_Recording_2026-08-16_074703_epfxpc.mp4';
 const chatApp = 'https://res.cloudinary.com/douxhwl8g/video/upload/v1781009690/chatapp_ctpieh.mp4';
-const quickblog = 'https://res.cloudinary.com/douxhwl8g/video/upload/v1781009699/quickblog_oambgz.mp4';
+const quickblog = 'https://res.cloudinary.com/douxhwl8g/video/upload/v1786847255/Screen_Recording_2026-08-16_083558_sg2iix.mp4';
 const auth = 'https://res.cloudinary.com/douxhwl8g/video/upload/v1781009685/auth_ewutov.mp4';
 
 import auth_logo from './favicon-auth.svg'
-import quickblog_logo from './favicon-quickblog.svg'
+import spaceblog_logo from './favicon-spaceblog.svg'
 import quickchat_logo from './favicon-quickchat.svg'
 
 import facebook_logo from './facebook.svg';
@@ -44,7 +45,8 @@ export const assets = {
   github_logo,
   link_logo,
   link_arrow_logo,
-  prototype
+  prototype,
+  profile
 }
 
 export const navItem = [
@@ -71,9 +73,9 @@ export const buttons = [
 ]
 
 export const paragraphs = [
-  'ผมชื่อ ต่อวัย พิมพบุตร ชื่อเล่น แชมป์ อายุ 18 ปี มึความสนใจเกี่ยวกับคอมพิวเตอร์ตั้งแต่ยังเด็ก เนื่องจากมีโอกาสได้ไปเล่นเกมที่ร้านเกมกับพี่ชาย จึงทำมีความชอบในการเล่นเกมเช่นกัน — ผมได้โน๊ตบุ๊คเครื่องแรกตอน ม.3 หลังจากได้โน๊ตบุ๊คมา ผมก็ได้เล่นเกม PC แบบสมใจอยาก — ในไม่นานผมก็ได้เริ่มใช้โน๊ตบุ๊คทำสไลด์นำเสอนงาน ทำรายงาน และใช้เขียนโค้ด แต่การเขียนโค้ดก็ยังออกมาไม่ดีมาก ผมจึงได้ไปศึกษาเพิ่มเติม นั้นทำให้รู้ว่าผมอยากจะเขียนโค้ดและชอบที่จะได้เรียนรู้สิ่งใหม่ๆ',
+  'ผมชื่อ ต่อวัย พิมพบุตร ชื่อเล่น แชมป์ อายุ 18 ปี มีความสนใจเกี่ยวกับคอมพิวเตอร์ตั้งแต่ยังเด็ก เนื่องจากมีโอกาสได้ไปเล่นเกมที่ร้านเกมกับพี่ชาย จึงทำมีความชอบในการเล่นเกมเช่นกัน — ผมได้โน๊ตบุ๊คเครื่องแรกตอน ม.3 หลังจากได้โน๊ตบุ๊คมา ผมก็ได้เล่นเกม PC แบบสมใจอยาก — ในไม่นานผมก็ได้เริ่มใช้โน๊ตบุ๊คทำสไลด์นำเสอนงาน ทำรายงาน และใช้เขียนโค้ด แต่การเขียนโค้ดก็ยังออกมาไม่ดีมาก ผมจึงได้ไปศึกษาเพิ่มเติม นั้นทำให้รู้ว่าผมอยากจะเขียนโค้ดและชอบที่จะได้เรียนรู้สิ่งใหม่ๆ',
   'ผมเริ่มศึกษาและฝึกเขียนโค้ดอย่างจริงจังตั้งแต่ ม.4 ( 2567 ) โดยได้ตั้งเป้าหมายไว้ว่าภายใน พ.ศ.2567 - 2570 จะต้องมีทักษะในการพัฒนาเว็บไซต์ทั้ง Frontend  Backend และสามารถใช้เครื่องมือได้อย่างชำนาญ ผมเริ่มต้นจากการศึกษาที่ฝั่ง Frontend เพื่อทำเกี่ยวกับหน้าเว็บ แล้วไปศึกษาต่อที่ฝั่ง Backend เพื่อให้เว็บไซต์สามารถทำงานร่วมกับฐานข้อมูลได้ หลังนั้นจึงเริ่มใช้ Figma เพื่อออกแบบโครงสร้างเว็บไซต์และใช้ GitHub เพื่อให้สามารถอัปเดตหรือแก้ไข Project ได้โดยที่ไม่กระทบกับ Main Project',
-  'หลังจากที่มีพื้นฐาน ผมก็เริ่มฝึกสร้างเว็บไซต์แบบ Full Stack โดยใช้ MongoDB Express.js React Node.js ( MERN ) ในการเขียนโค้ดเป็นหลัก โดยส่วนใหญ่ก็เพื่อฝึกทักษะในการแก้ไขปัญหาอยางเป็นระบบ หลังจากที่สร้างเว็บไซต์เสร็จก็จะมาทบโค้ดที่ได้เขียนลงไปอีกที แล้วส่งโค้ดให้ AI ตรวจสอบและให้แนะนำจุดที่ควรแก้เพื่อให้โค้ดทำงานได้อย่างมีประสิทธิภาพ',
+  'หลังจากที่มีพื้นฐาน ผมก็เริ่มฝึกสร้างเว็บไซต์แบบ Full Stack โดยใช้ MongoDB Express.js React Node.js ( MERN ) ในการเขียนโค้ดเป็นหลัก โดยส่วนใหญ่ก็เพื่อฝึกทักษะในการแก้ไขปัญหาอย่างเป็นระบบ หลังจากที่สร้างเว็บไซต์เสร็จก็จะมาตรวจสอบโค้ดที่เขียนอีกที แล้วส่งโค้ดให้ AI ตรวจสอบและให้แนะนำจุดที่ควรแก้เพื่อให้โค้ดทำงานได้อย่างมีประสิทธิภาพ',
   'เวลาที่ทำงานผมมักจะฟังเพลง เพราะทำให้รู้สึกทำงานได้ดีและมีสมาธิมากขึ้น — เมื่อไม่ได้ทำงานจะพักผ่อนด้วยการเปิด Podcast ฟังพร้อมไปกับการเล่นเกม หรือดูอนิเมะและภาพยนต์'
 ]
 
@@ -111,8 +113,15 @@ export const projectCard = [
         "name": "Motion"
       },
     ],
+    buttonList: [
+      {
+        icon: figma,
+        text: "Figma",
+        link: 'https://www.figma.com/design/ssKHDghC8rimcZPJsYX0By/Portfolio?node-id=0-1&p=f&t=Nk4GkhFtciEyoige-0',
+        target: "_blank"
+      },
+    ],
     video: portfolio,
-    link: 'https://www.figma.com/design/ssKHDghC8rimcZPJsYX0By/Portfolio?node-id=0-1&p=f&t=Nk4GkhFtciEyoige-0',
     year: '2026',
   },
   {
@@ -168,12 +177,19 @@ export const projectCard = [
         "name": "Cloudinary"
       },
     ],
+    buttonList: [
+      {
+        icon: link_arrow_logo,
+        text: "Project",
+        link: "/project/0",
+        target: "_self"
+      },
+    ],
     video: chatApp,
-    link: '/',
     year: '2026',
   },
   {
-    name: 'QuickBlog',
+    name: 'SpaceBlog',
     description: 'Web Blog ที่ใช้ AI เข้ามาช่วยในการสร้าง blog โดยใช้ Gemini API มาช่วยในการคิด description ใช้ React และ Node.js ในการพัฒนา',
     tool: [
       {
@@ -229,6 +245,19 @@ export const projectCard = [
         "name": "Gemini"
       },
     ],
+    buttonList: [
+      {
+        icon: link_logo,
+        text: "Live Demo",
+        link: "/"
+      },
+      {
+        icon: link_arrow_logo,
+        text: "Project",
+        link: "/project/1",
+        target: "_self"
+      },
+    ],
     video: quickblog,
     link: '/',
     year: '2026',
@@ -276,6 +305,14 @@ export const projectCard = [
       {
         "icon": expressJS,
         "name": "Express.js"
+      },
+    ],
+    buttonList: [
+      {
+        icon: link_arrow_logo,
+        text: "Project",
+        link: "/project/2",
+        target: "_self"
       },
     ],
     video: auth,
@@ -368,8 +405,8 @@ export const projectInfo = [
     ],
   },
   {
-    logo: quickblog_logo,
-    name: 'QuickBlog',
+    logo: spaceblog_logo,
+    name: 'SpaceBlog',
     description: 'Web Blog ที่ใช้ AI เข้ามาช่วยในการสร้าง blog โดยใช้ Gemini API มาช่วยในการคิด description ใช้ React และ Node.js ในการพัฒนา',
     video: quickblog,
     feature: [

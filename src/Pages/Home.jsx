@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { lazy, useEffect } from 'react'
 import Navbar from '../Components/Navbar'
 import Menu from '../Components/Menu'
 import Hero from '../Components/Hero'
-import About from '../Components/About'
-import Skill from '../Components/Skill'
-import Contact from '../Components/Contact'
-import Footer from '../Components/Footer'
-import ProjectList from '../Components/ProjectList'
+const About = lazy(() => import('../Components/About'))
+const Skill = lazy(() => import('../Components/Skill'))
+const ProjectList = lazy(() => import('../Components/ProjectList'))
+const Contact = lazy(() => import('../Components/Contact'))
+const Footer = lazy(() => import('../Components/Footer'))
 import { useLocation } from 'react-router-dom'
 import { useAppContext } from '../context/AppContext'
 

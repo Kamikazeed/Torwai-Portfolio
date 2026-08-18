@@ -52,25 +52,14 @@ const ProjectCard = ({project, index}) => {
             <h3 className='text-xl text-primary font-bold mt-2 md:mt-3 md:text-3xl'>{project.name}</h3>
           </div>
           <p className='thai text-sm leading-6 mt-2 md:text-md md:mt-3'>{project.description}</p>
-          {index === 0 ? 
-            <div className='flex flex-wrap gap-2 mt-5'>
-              <a className='flex items-center gap-[6px] primary-border px-1 py-[6px] text-primary text-sm font-regural cursor-pointer duration-100 hover:bg-secondary-bg/50 md:gap-2 md:px-2 md:text-md md:font-medium' href={project.link} title='Figma' aria-label='Figma' target='_blank'>
-                <img className='w-5 h-5 md:w-7 md:h-7' src={buttons[2].icon} alt={buttons[2].text} loading='lazy' />
-                <span>{buttons[2].text}</span>
-              </a>
-            </div>
-            :
-            <div className='flex flex-wrap gap-2 mt-5'>
-              <a className='flex items-center gap-[6px] primary-border px-1 py-[6px] text-primary text-sm font-regural cursor-pointer duration-100 hover:bg-secondary-bg/50 md:gap-2 md:px-2 md:text-md md:font-medium' href='#' >
-                <img className='w-5 h-5 md:w-7 md:h-7' src={buttons[0].icon} alt={buttons[0].text} loading='lazy' />
-                <span>{buttons[0].text}</span>
-              </a>
-              <a className='flex items-center gap-[6px] primary-border px-1 py-[6px] text-primary text-sm font-regural cursor-pointer duration-100 hover:bg-secondary-bg/50 md:gap-2 md:px-2 md:text-md md:font-medium' href={`/project/${index - 1}`}>
-                <img className='w-5 h-5 md:w-7 md:h-7' src={buttons[1].icon} alt={buttons[1].text} loading='lazy' />
-                <span>{buttons[1].text}</span>
-              </a>
-            </div>
-          }
+          <div className='flex flex-wrap gap-2 mt-5'>
+            {project.buttonList.map((button) => (
+                <a className='flex items-center gap-[6px] primary-border px-1 py-[6px] text-primary text-sm font-regural cursor-pointer duration-100 hover:bg-secondary-bg/50 md:gap-2 md:px-2 md:text-md md:font-medium' href={button.link} title={button.text} aria-label={button.text} target={button.target}  key={button.text}>
+                  <img className='w-5 h-5 md:w-7 md:h-7' src={button.icon} alt={button.text} loading='lazy' />
+                  <span>{button.text}</span>
+                </a>
+            ))}
+          </div>
         </div>
         
         <div className={`flex-initial w-full primary-border overflow-hidden lg:w-[50%] ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>

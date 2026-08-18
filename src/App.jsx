@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import Loader from './Components/Loader'
-const Home = lazy(() => import('./Pages/Home'))
+import Home from './Pages/Home'
 const Project = lazy(() => import('./Pages/Project'))
 
 

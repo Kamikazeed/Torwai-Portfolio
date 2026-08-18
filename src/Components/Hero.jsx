@@ -35,7 +35,7 @@ const Hero = () => {
         <div className={`flex flex-wrap w-full items-center gap-2 mt-2`}>
           {item.map((item, index) => (
             <motion.a className='flex items-center gap-2 primary-border px-1 py-[2px] text-primary text-sm font-medium cursor-pointer duration-100 hover:bg-secondary-bg/50 md:px-2 md:text-md' href={item.link} title='Facebook' aria-label='Facebook' target='_blank' variants={animation[1]} whileHover={{scale: 1.05}} whileTap={{scale: 0.95}} key={index}>
-              <img className='w-7 h-7' src={assets.facebook_logo} alt='facebook' loading='lazy' />
+              <img className='w-7 h-7' src={assets.facebook_logo} alt='facebook'/>
               <span>{item.text}</span>
             </motion.a>
           ))}
@@ -43,7 +43,7 @@ const Hero = () => {
       </div>
 
       <motion.div className={`w-fit relative`} variants={animation[2]}>
-        <img className={`w-72 lg:w-96`} src={assets.prototype} alt='profile' loading='lazy' />
+        <img className={`w-72 lg:w-96 h-74 lg:h-98`} src={assets.profile} alt='profile'/>
         <span className={`absolute w-[90%] h-[80%] left-[5%] bottom-0 -z-1 primary-border`}></span>
       </motion.div>
     </motion.section>

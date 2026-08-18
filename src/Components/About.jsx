@@ -27,7 +27,7 @@ const About = () => {
         viewport={{once: true, amount: 0.2}}
       >
         <motion.div className='h-fit w-fit relative' variants={animation[1]}>
-          <img className={`w-72 lg:w-96`} src={assets.prototype} alt='profile' loading='lazy' />
+          <img className={`w-72 lg:w-96 h-74 lg:h-98`} src={assets.profile} alt='profile' loading='lazy' />
           <span className={`absolute w-[90%] h-[80%] left-[5%] bottom-0 -z-1 primary-border `}></span>
         </motion.div>
 
