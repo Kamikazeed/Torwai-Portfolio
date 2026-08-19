@@ -249,7 +249,7 @@ export const projectCard = [
       {
         icon: link_logo,
         text: "Live Demo",
-        link: "/"
+        link: "https://space-blog-delta.vercel.app/"
       },
       {
         icon: link_arrow_logo,
