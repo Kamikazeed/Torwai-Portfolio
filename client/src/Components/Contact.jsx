@@ -28,10 +28,10 @@ const Contact = () => {
 
     const data = await response.json();
     if (data.success) {
-      toast.success("Form Submitted Successfully")
+      toast.success("Form Submitted Successfully", {theme: 'dark'})
       e.target.reset();
     } else {
-      toast.error("Error");
+      toast.error("Error", {theme: 'dark'});
     }
     setIsSubmit(false);
   };
