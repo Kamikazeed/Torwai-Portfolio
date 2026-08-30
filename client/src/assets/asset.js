@@ -1,10 +1,9 @@
 
-import prototype from './Wither.webp';
 import profile from './profile.webp';
 
-const portfolio = 'https://res.cloudinary.com/douxhwl8g/video/upload/v1786847198/Screen_Recording_2026-08-16_074703_epfxpc.mp4';
+const portfolio = 'https://res.cloudinary.com/douxhwl8g/video/upload/v1787404478/portfolio_sm5gi1.mp4';
 const chatApp = 'https://res.cloudinary.com/douxhwl8g/video/upload/v1781009690/chatapp_ctpieh.mp4';
-const quickblog = 'https://res.cloudinary.com/douxhwl8g/video/upload/v1786847255/Screen_Recording_2026-08-16_083558_sg2iix.mp4';
+const quickblog = 'https://res.cloudinary.com/douxhwl8g/video/upload/v1787404508/spaceblog_vguhtc.mp4';
 const auth = 'https://res.cloudinary.com/douxhwl8g/video/upload/v1781009685/auth_ewutov.mp4';
 
 import auth_logo from './favicon-auth.svg'
@@ -45,7 +44,6 @@ export const assets = {
   github_logo,
   link_logo,
   link_arrow_logo,
-  prototype,
   profile
 }
 
@@ -249,7 +247,7 @@ export const projectCard = [
       {
         icon: link_logo,
         text: "Live Demo",
-        link: "https://space-blog-delta.vercel.app/"
+        link: "https://space-blog-delta.vercel.app"
       },
       {
         icon: link_arrow_logo,
