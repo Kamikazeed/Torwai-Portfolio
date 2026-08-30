@@ -7,7 +7,7 @@ import { animateContainer, animation } from '../utils/animation';
 
 const Navbar = () => {
 
-  const {openMenu, setOpenMenu, scrollToSection, isMedium} = useAppContext();
+  const {setOpenMenu, scrollToSection, isMedium} = useAppContext();
   const [currentSection, setCurrentSection] = useState('');
   const location = useLocation();
 
