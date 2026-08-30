@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { motion, useInView } from "motion/react"
 import { useParams } from 'react-router-dom'
 import { projectInfo, buttons } from '../../assets/asset';
@@ -38,14 +38,15 @@ const ProjectHeader = () => {
           </motion.h2>
         </div>
         
-        {id === '1' && 
+        
         <div className='flex justify-center gap-2 mt-4 md:gap-3 md:mt-6'>
-          <motion.a className='flex items-center gap-[6px] border-2 border-border rounded-md px-1 py-[6px] text-primary text-sm font-regural cursor-pointer duration-100 hover:bg-secondary-bg/50 md:gap-2 md:px-2 md:text-md md:font-medium' href='https://space-blog-delta.vercel.app' aria-label={buttons.text} title={buttons.text} variants={animation[1]}>
-            <img className='w-5 h-5 md:w-7 md:h-7' alt={buttons[0].text} src={buttons[0].icon} />
-            <span>{buttons[0].text}</span>
-          </motion.a>
+          {data.buttonList.map((item, index) => (
+            <motion.a className='flex items-center gap-[6px] border-2 border-border rounded-md px-1 py-[6px] text-primary text-sm font-regural cursor-pointer duration-100 hover:bg-secondary-bg/50 md:gap-2 md:px-2 md:text-md md:font-medium' href={item.link} aria-label={item.alt} title={item.alt} target={item.target} variants={animation[1]} key={index}>
+              <img className='w-5 h-5 md:w-7 md:h-7' alt={item.alt} src={item.icon} />
+              <span>{item.text}</span>
+            </motion.a>
+          ))}
         </div>
-        }
       </motion.div>
 
       <motion.div className='flex flex-col gap-16 mt-14 md:mt-18'

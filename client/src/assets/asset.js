@@ -20,23 +20,17 @@ import css from './css.svg';
 import javaScript from './javascript.svg';
 import react from './react.svg';
 import tailwind from './tailwindcss.svg';
-import vite from './vite.svg';
 import reactRouter from './reactrouter.svg';
 import axios from './axios.svg';
 import socket from './socket.svg';
 import motion from './motion.svg';
-import npm from './npm.svg';
 
 import nodeJS from './nodejs.svg';
 import mongoDB from './mongoDB.svg';
 import expressJS from './express.svg';
 import cloudinary from './cloudinary.svg';
 
-import vsCode from './vscode.svg';
-import chatGPT from './chatgpt.svg';
-import youtube from './youtube.svg';
 import figma from './figma.svg';
-import canva from './canva.svg';
 import gemini from './gemini.svg';
 
 export const assets = {
@@ -118,6 +112,12 @@ export const projectCard = [
         link: 'https://www.figma.com/design/ssKHDghC8rimcZPJsYX0By/Portfolio?node-id=0-1&p=f&t=Nk4GkhFtciEyoige-0',
         target: "_blank"
       },
+      {
+        icon: github_logo,
+        text: "Source Code",
+        link: 'https://github.com/Kamikazeed/Torwai-Portfolio',
+        target: "_blank"
+      },
     ],
     video: portfolio,
     year: '2026',
@@ -181,6 +181,12 @@ export const projectCard = [
         text: "Project",
         link: "/project/0",
         target: "_self"
+      },
+      {
+        icon: github_logo,
+        text: "Source Code",
+        link: 'https://github.com/Kamikazeed/ChatApp-Torwai',
+        target: "_blank"
       },
     ],
     video: chatApp,
@@ -247,7 +253,8 @@ export const projectCard = [
       {
         icon: link_logo,
         text: "Live Demo",
-        link: "https://space-blog-delta.vercel.app"
+        link: "https://space-blog-delta.vercel.app",
+        target: "_blank"
       },
       {
         icon: link_arrow_logo,
@@ -255,9 +262,14 @@ export const projectCard = [
         link: "/project/1",
         target: "_self"
       },
+      {
+        icon: github_logo,
+        text: "Source Code",
+        link: 'https://github.com/Kamikazeed/SpaceBlog-Torwai',
+        target: "_blank"
+      },
     ],
     video: quickblog,
-    link: '/',
     year: '2026',
   },
   {
@@ -312,9 +324,14 @@ export const projectCard = [
         link: "/project/2",
         target: "_self"
       },
+      {
+        icon: github_logo,
+        text: "Source Code",
+        link: 'https://github.com/Kamikazeed/Auth-Torwai',
+        target: "_blank"
+      },
     ],
     video: auth,
-    link: '/',
     year: '2026',
   },
 ]
@@ -325,6 +342,15 @@ export const projectInfo = [
     name: 'QuickChat',
     description: 'Chat App สามารถสนทนา ส่งข้อความและรูปภาพได้แบบเรียลไทม์ ใช้ React และ Tailwind ในการสร้างแอป และใช้ Socket.IO ในการทำระบบรับส่งข้อความแบบเรียลไทม์',
     video: chatApp,
+    buttonList: [
+      {
+        icon: github_logo,
+        text: "Source Code",
+        link: 'https://github.com/Kamikazeed/ChatApp-Torwai',
+        alt: 'GitHub',
+        target: "_blank"
+      },
+    ],
     feature: [
       {
         title: 'Sign Up & Login',
@@ -407,6 +433,22 @@ export const projectInfo = [
     name: 'SpaceBlog',
     description: 'Web Blog ที่ใช้ AI เข้ามาช่วยในการสร้าง blog โดยใช้ Gemini API มาช่วยในการคิด description ใช้ React และ Node.js ในการพัฒนา',
     video: quickblog,
+    buttonList: [
+      {
+        icon: link_logo,
+        text: "Live Demo",
+        link: "https://space-blog-delta.vercel.app",
+        alt: 'SpaceBlog',
+        target: "_blank"
+      },
+      {
+        icon: github_logo,
+        text: "Source Code",
+        link: 'https://github.com/Kamikazeed/SpaceBlog-Torwai',
+        alt: 'GitHub',
+        target: "_blank"
+      },
+    ],
     feature: [
       {
         title: 'Responsive Design',
@@ -501,6 +543,15 @@ export const projectInfo = [
     name: 'Auth',
     description: 'Auth App ทำขึ้นเพื่อแสดงทักษะในการทำระบบ login หรือ sign up การจัดการกับข้อมูลหลังยืนยันตัวตน และมี่การส่ง OTP เพื่อยืนยันและรีเซ็ตรหัส ใช้ React และ Node.js ในการพัฒนา',
     video: auth,
+    buttonList: [
+      {
+        icon: github_logo,
+        text: "Source Code",
+        link: 'https://github.com/Kamikazeed/Auth-Torwai',
+        alt: 'GitHub',
+        target: "_blank"
+      },
+    ],
     feature: [
       {
         title: 'Validation',

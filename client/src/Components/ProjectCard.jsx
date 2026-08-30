@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import { motion, useInView } from "motion/react"
-import { useAppContext } from '../context/AppContext'
-import { buttons } from '../assets/asset'
 import { animateContainer, animation } from '../utils/animation';
 
 const ProjectCard = ({project, index}) => {

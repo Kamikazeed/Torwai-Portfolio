@@ -11,6 +11,11 @@ const Hero = () => {
       text: 'Facebook',
       link: 'https://www.facebook.com/phimphabut.torwai'
     },
+    {
+      img: assets.github_logo,
+      text: 'GitHub',
+      link: 'https://github.com/Kamikazeed'
+    },
   ]
 
   const hero_data = {

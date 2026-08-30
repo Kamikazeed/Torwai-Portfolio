@@ -11,7 +11,13 @@ const Contact = () => {
   const contact = [
     {
       img: assets.facebook_logo,
-      link: 'https://www.facebook.com/phimphabut.torwai'
+      link: 'https://www.facebook.com/phimphabut.torwai',
+      title: 'Facebook'
+    },
+    {
+      img: assets.github_logo,
+      link: 'https://github.com/Kamikazeed',
+      title: 'GitHub'
     },
   ]
 
@@ -57,12 +63,12 @@ const Contact = () => {
       >
         {contact.map((item, index) => (
           <motion.a className='flex items-center justify-center primary-border p-[2px] cursor-pointer duration-100 hover:bg-secondary-bg md:w-10 md:h-10'
-            href={item.link} title='Facebook' aria-label='Facebook' target='_blank' key={index}
+            href={item.link} title={item.title} aria-label={item.title} target='_blank' key={index}
             variants={animation[1]}
             whileHover={{scale: 1.1}}
             whileTap={{scale: 0.9}}
           >
-            <img className='w-9 h-9' src={item.img} alt='facebook' loading='lazy' />
+            <img className='w-9 h-9' src={item.img} alt={item.title} loading='lazy' />
           </motion.a>
         ))}
       </motion.div>
