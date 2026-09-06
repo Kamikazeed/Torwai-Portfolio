@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from "motion/react"
+import { toast } from 'react-toastify'
 import { useParams } from 'react-router-dom'
-import { projectInfo, buttons } from '../../assets/asset';
+import { projectInfo, assets} from '../../assets/asset';
 import { animateContainer, animation } from '../../utils/animation';
 
 const ProjectHeader = () => {
@@ -10,6 +11,19 @@ const ProjectHeader = () => {
   const inView = useInView(videoRef, {amount: 0.3})
   const {id} = useParams();
   const data = projectInfo[id]
+  // const [isCopied, setIsCopied] = useState(false);
+
+  const handleCopy = async (value) => {
+    try {
+      await navigator.clipboard.writeText(value);
+      // setIsCopied(true);
+      // setTimeout(() => setIsCopied(false), 2000);
+      toast.success("Copied", {theme: 'dark'});
+
+    } catch (error) {
+      toast.error("Cannot be copied", {theme: 'dark'});
+    }
+  }
 
   useEffect(() => {
     const video = videoRef.current
@@ -64,6 +78,25 @@ const ProjectHeader = () => {
             <div className={`flex-initial w-full text-primary lg:w-[45%]`}>
               <h3 className='text-xl text-primary font-bold mt-2 md:mt-3 md:text-3xl'>{data.name}</h3>
               <p className='thai text-secondary text-md mt-2 md:text-lg md:mt-3'>{data.description}</p>
+              {data.credential && (
+                <div className='mt-4 py-4 px-3 rounded-md bg-secondary-bg/50'>
+                  <span className='block text-center text-primary text-md font-semibold md:text-lg'>Demo Credentials</span>
+                  <div className='flex flex-col gap-4 mt-4'>
+                    <div className='flex items-center justify-between'>
+                      <p className='text-primary '>Email : {data.credential.email}</p>
+                      <button className='flex items-center justify-center cursor-pointer' onClick={() => handleCopy(data.credential.email)}>
+                        <img className='w-7 h-7' src={assets.copy_icon} alt="copy_icon" />
+                      </button>
+                    </div>
+                    <div className='flex items-center justify-between'>
+                      <p className='text-primary '>Password : {data.credential.password}</p>
+                      <button className='flex items-center justify-center cursor-pointer' onClick={() => handleCopy(data.credential.password)}>
+                        <img className='w-7 h-7' src={assets.copy_icon} alt="copy_icon" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
             
             <div className={`flex-initial w-full border-2 border-border rounded-lg overflow-hidden lg:w-[50%] `}>

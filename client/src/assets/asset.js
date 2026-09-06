@@ -14,6 +14,7 @@ import facebook_logo from './facebook.svg';
 import github_logo from './github.svg';
 import link_logo from './link.svg';
 import link_arrow_logo from './link_arrow.svg';
+import copy_icon from './copy_icon.svg';
 
 import html from './html.svg';
 import css from './css.svg';
@@ -38,6 +39,7 @@ export const assets = {
   github_logo,
   link_logo,
   link_arrow_logo,
+  copy_icon,
   profile
 }
 
@@ -537,6 +539,10 @@ export const projectInfo = [
         "name": "Gemini"
       },
     ],
+    credential: {
+      email: 'admin@gmail.com',
+      password: 'admin01',
+    },
   },
   {
     logo: auth_logo,

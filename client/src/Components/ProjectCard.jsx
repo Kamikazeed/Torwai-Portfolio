@@ -52,10 +52,10 @@ const ProjectCard = ({project, index}) => {
           <p className='thai text-sm leading-6 mt-2 md:text-md md:mt-3'>{project.description}</p>
           <div className='flex flex-wrap gap-2 mt-5'>
             {project.buttonList.map((button) => (
-                <a className='flex items-center gap-[6px] primary-border px-1 py-[6px] text-primary text-sm font-regural cursor-pointer duration-100 hover:bg-secondary-bg/50 md:gap-2 md:px-2 md:text-md md:font-medium' href={button.link} title={button.text} aria-label={button.text} target={button.target}  key={button.text}>
-                  <img className='w-5 h-5 md:w-7 md:h-7' src={button.icon} alt={button.text} loading='lazy' />
-                  <span>{button.text}</span>
-                </a>
+              <a className='flex items-center gap-[6px] primary-border px-1 py-[6px] text-primary text-sm font-regural cursor-pointer duration-100 hover:bg-secondary-bg/50 md:gap-2 md:px-2 md:text-md md:font-medium' href={button.link} title={button.text} aria-label={button.text} target={button.target} key={button.text}>
+                <img className='w-5 h-5 md:w-7 md:h-7' src={button.icon} alt={button.text} loading='lazy' />
+                <span>{button.text}</span>
+              </a>
             ))}
           </div>
         </div>

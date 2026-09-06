@@ -85,7 +85,7 @@ input:-webkit-autofill {
   position: absolute;
   top: 0;
   height: 100%;
-  width: 4rem;
+  width: 56px;
   z-index: 1;
 }
 
