@@ -63,7 +63,7 @@ const Navbar = () => {
         animate='show'
         viewport={{once: true}}
       >
-        <motion.a className='text-primary text-4xl font-bold cursor-pointer' href={location.pathname === '/' ? '#Home' : '/'} onClick={location.pathname === '/' ? onClickLogo : ''} variants={animation[0]}>
+        <motion.a className='text-primary text-4xl font-bold cursor-pointer' href={location.pathname === '/' ? '#Home' : '/'} onClick={location.pathname === '/' ? onClickLogo : null} variants={animation[0]}>
           Torwai<span className='text-blue'>.</span>
         </motion.a>
 

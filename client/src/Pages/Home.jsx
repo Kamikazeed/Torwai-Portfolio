@@ -8,11 +8,9 @@ const ProjectList = lazy(() => import('../Components/ProjectList'))
 const Contact = lazy(() => import('../Components/Contact'))
 const Footer = lazy(() => import('../Components/Footer'))
 import { useLocation } from 'react-router-dom'
-import { useAppContext } from '../context/AppContext'
 
 const Home = () => {
 
-  const {navigate} = useAppContext();
   const location = useLocation()
 
   useEffect(() => {
