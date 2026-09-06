@@ -90,7 +90,7 @@ const ProjectHeader = () => {
                     </div>
                     <div className='flex items-center justify-between'>
                       <p className='text-primary '>Password : {data.credential.password}</p>
-                      <button className='flex items-center justify-center cursor-pointer' onClick={() => handleCopy(data.credential.email)}>
+                      <button className='flex items-center justify-center cursor-pointer' onClick={() => handleCopy(data.credential.password)}>
                         <img className='w-7 h-7' src={assets.copy_icon} alt="copy_icon" />
                       </button>
                     </div>
