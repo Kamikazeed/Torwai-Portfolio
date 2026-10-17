@@ -1,16 +1,24 @@
-# React + Vite
+# My Personal Portfolio
+เว็บไซต์ Portfolio ส่วนตัวที่สร้างขึ้นเพื่อแสดงทักษะ ผลงาน และวิธีการคิด 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Demo
+➡️ : https://torwai-portfolio.vercel.app
 
-Currently, two official plugins are available:
+## Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## Features
+- **Project Info** : ผู้ใช้สามารถเลือกดูข้อมูลเกี่ยวกับผลงานแต่ละชิ้นได้
+- **Section Scroll** : สามารถกดปุ่มที่อยู่ขวาบนแล้วระบบจะพาไปยังส่วนที่เลือก
+- **Send Email** : ระบบส่งข้อความหาเจ้าของเว็บไซต์ผ่านทางอีเมล
+- **Responsive Design** : เว็บไซต์ถูกออกแบบมาให้สามารถใช้งานได้กับทุกอุปกรณ์
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=vite" alt="Vite" width="48" height="48" />&emsp;
+  <img src="https://skillicons.dev/icons?i=react" alt="React" width="48" height="48" />&emsp;
+  <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind CSS" width="48" height="48" />&emsp;
+</div>
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## License
+MIT
