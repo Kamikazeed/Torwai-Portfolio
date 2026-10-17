@@ -6,7 +6,7 @@ import { animateContainer, animation } from '../utils/animation';
 const About = () => {
 
   return (
-    <section className='pb-15 lg:pb-20' id='About'>
+    <section id='About'>
       <motion.div
         variants={animateContainer[0]}
         initial='hidden'

@@ -7,7 +7,7 @@ import { animateContainer, animation } from '../utils/animation';
 const ProjectList = () => {
 
   return (
-    <section className='pb-15 lg:pb-20' id='Projects'>
+    <section className='mt-15 lg:mt-20' id='Projects'>
       <motion.div
         variants={animateContainer[0]}
         initial='hidden'

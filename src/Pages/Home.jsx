@@ -1,4 +1,4 @@
-import React, { lazy, useEffect } from 'react'
+import { lazy, useEffect } from 'react'
 import Navbar from '../Components/Navbar'
 import Menu from '../Components/Menu'
 import Hero from '../Components/Hero'

@@ -6,7 +6,7 @@ const { skills } = await import('../assets/skillIcon')
 const Skill = () => {
   
   return (
-    <section className='pb-15 lg:pb-20' id='Skills'>
+    <section className='mt-15 lg:mt-20' id='Skills'>
       <motion.div
         variants={animateContainer[0]}
         initial='hidden'

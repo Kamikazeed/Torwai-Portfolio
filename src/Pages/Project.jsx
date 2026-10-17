@@ -1,4 +1,3 @@
-import React from 'react'
 import Navbar from '../Components/Navbar'
 import ProjectHeader from '../Components/project/ProjectHeader'
 import Footer from '../Components/Footer'

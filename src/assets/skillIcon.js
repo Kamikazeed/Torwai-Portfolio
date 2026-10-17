@@ -13,15 +13,14 @@ import npm from './npm.svg';
 
 import nodeJS from './nodejs.svg';
 import mongoDB from './mongoDB.svg';
-import expressJS from './express.svg';
+import expressJS from './express_white.svg';
 import cloudinary from './cloudinary.svg';
 
 import vsCode from './vscode.svg';
-import chatGPT from './chatgpt.svg';
+import copilot from './copilot.svg';
 import youtube from './youtube.svg';
 import figma from './figma.svg';
 import canva from './canva.svg';
-import gemini from './gemini.svg';
 
 export const skills = [
   {
@@ -110,8 +109,8 @@ export const skills = [
         "name": "MongoDB Compass"
       },
       {
-        "icon": chatGPT,
-        "name": "ChatGPT"
+        "icon": copilot,
+        "name": "Github Copilot"
       },
       {
         "icon": youtube,
