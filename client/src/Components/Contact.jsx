@@ -43,7 +43,7 @@ const Contact = () => {
   };
   
   return (
-    <section className='pb-15 lg:pb-20' id='Contact'>
+    <section className='mt-15 lg:mt-20 pb-15 lg:pb-20' id='Contact'>
       <motion.div className='text-center'
         variants={animateContainer[0]}
         initial='hidden'

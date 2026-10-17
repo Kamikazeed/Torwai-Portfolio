@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { motion, useInView } from "motion/react"
 import { toast } from 'react-toastify'
 import { useParams } from 'react-router-dom'
@@ -11,13 +11,10 @@ const ProjectHeader = () => {
   const inView = useInView(videoRef, {amount: 0.3})
   const {id} = useParams();
   const data = projectInfo[id]
-  // const [isCopied, setIsCopied] = useState(false);
 
   const handleCopy = async (value) => {
     try {
       await navigator.clipboard.writeText(value);
-      // setIsCopied(true);
-      // setTimeout(() => setIsCopied(false), 2000);
       toast.success("Copied", {theme: 'dark'});
 
     } catch (error) {
@@ -77,7 +74,7 @@ const ProjectHeader = () => {
           <motion.div className='flex flex-col-reverse justify-between items-center gap-5 py-8 md:gap-8 md:py-12 lg:flex-row lg:py-14' variants={animation[1]}>
             <div className={`flex-initial w-full text-primary lg:w-[45%]`}>
               <h3 className='text-xl text-primary font-bold mt-2 md:mt-3 md:text-3xl'>{data.name}</h3>
-              <p className='thai text-secondary text-md mt-2 md:text-lg md:mt-3'>{data.description}</p>
+              <p className='thai text-secondary leading-6 text-sm mt-2 md:text-md md:mt-3'>{data.description}</p>
               {data.credential && (
                 <div className='mt-4 py-4 px-3 rounded-md bg-secondary-bg/50'>
                   <span className='block text-center text-primary text-md font-semibold md:text-lg'>Demo Credentials</span>

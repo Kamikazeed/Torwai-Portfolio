@@ -5,10 +5,15 @@ const portfolio = 'https://res.cloudinary.com/douxhwl8g/video/upload/v1787404478
 const chatApp = 'https://res.cloudinary.com/douxhwl8g/video/upload/v1781009690/chatapp_ctpieh.mp4';
 const quickblog = 'https://res.cloudinary.com/douxhwl8g/video/upload/v1787404508/spaceblog_vguhtc.mp4';
 const auth = 'https://res.cloudinary.com/douxhwl8g/video/upload/v1781009685/auth_ewutov.mp4';
+const weathering = 'https://res.cloudinary.com/douxhwl8g/video/upload/v1791336926/weathering_id2eiv.mp4';
+const qrGenerator = 'https://res.cloudinary.com/douxhwl8g/video/upload/v1791336916/qrgenerator_ljldfv.mp4';
 
+
+import portfolio_logo from './favicon-portfolio-2.svg'
 import auth_logo from './favicon-auth.svg'
 import spaceblog_logo from './favicon-spaceblog.svg'
 import quickchat_logo from './favicon-quickchat.svg'
+import earth_logo from './earth.svg'
 
 import facebook_logo from './facebook.svg';
 import github_logo from './github.svg';
@@ -28,11 +33,12 @@ import motion from './motion.svg';
 
 import nodeJS from './nodejs.svg';
 import mongoDB from './mongoDB.svg';
-import expressJS from './express.svg';
+import expressJS from './express_white.svg';
 import cloudinary from './cloudinary.svg';
 
 import figma from './figma.svg';
 import gemini from './gemini.svg';
+import copilot from './copilot.svg';
 
 export const assets = {
   facebook_logo,
@@ -76,7 +82,7 @@ export const paragraphs = [
 export const projectCard = [
   {
     name: 'Portfolio',
-    description: 'เว็บไซต์ Portfolio ส่วนตัวที่สร้างขึ้นเพื่อแสดงทักษะ ผลงาน และวิธีการคิด โดยใช้ Figma ในการออกแบบ และใช้ React ในการสร้าง',
+    description: 'เว็บไซต์ Portfolio ส่วนตัวที่สร้างขึ้นเพื่อแสดงทักษะและผลงาน โดยใช้ Figma ในการออกแบบให้เข้ากับทุกขนาดหน้าจอ ใช้ React เป็น Library หลักในการสร้างเว็บไซต์ และใช้ Motion ในการทำแอนิเมชันให้กับเว็บไซต์ ',
     tool: [
       {
         "icon": html,
@@ -106,6 +112,10 @@ export const projectCard = [
         "icon": motion,
         "name": "Motion"
       },
+      {
+        "icon": cloudinary,
+        "name": "Cloudinary"
+      },
     ],
     buttonList: [
       {
@@ -113,6 +123,12 @@ export const projectCard = [
         text: "Figma",
         link: 'https://www.figma.com/design/ssKHDghC8rimcZPJsYX0By/Portfolio?node-id=0-1&p=f&t=Nk4GkhFtciEyoige-0',
         target: "_blank"
+      },
+      {
+        icon: link_arrow_logo,
+        text: "Project",
+        link: "/project/0",
+        target: "_self"
       },
       {
         icon: github_logo,
@@ -179,9 +195,15 @@ export const projectCard = [
     ],
     buttonList: [
       {
+        icon: link_logo,
+        text: "Live Demo",
+        link: "https://quickchat-chatapp.vercel.app",
+        target: "_blank"
+      },
+      {
         icon: link_arrow_logo,
         text: "Project",
-        link: "/project/0",
+        link: "/project/1",
         target: "_self"
       },
       {
@@ -196,7 +218,7 @@ export const projectCard = [
   },
   {
     name: 'SpaceBlog',
-    description: 'Web Blog ที่ใช้ AI เข้ามาช่วยในการสร้าง blog โดยใช้ Gemini API มาช่วยในการคิด description ใช้ React และ Node.js ในการพัฒนา',
+    description: 'Web Blog ที่ใช้ AI เข้ามาช่วยในการสร้างบล็อก โดยใช้ Gemini API มาช่วยในการคิดคำอธิบายด้วยการใช้หัวข้อของบล็อก ใช้เครื่องมืออย่าง React และ Node.js ในการพัฒนา',
     tool: [
       {
         "icon": html,
@@ -261,7 +283,7 @@ export const projectCard = [
       {
         icon: link_arrow_logo,
         text: "Project",
-        link: "/project/1",
+        link: "/project/2",
         target: "_self"
       },
       {
@@ -276,7 +298,7 @@ export const projectCard = [
   },
   {
     name: 'Auth',
-    description: 'Auth App ทำขึ้นเพื่อแสดงทักษะในการทำระบบ login หรือ sign up การจัดการกับข้อมูลหลังยืนยันตัวตน และมี่การส่ง OTP เพื่อยืนยันและรีเซ็ตรหัส ใช้ React และ Node.js ในการพัฒนา',
+    description: 'Auth App ทำขึ้นเพื่อฝึกทักษะในการทำระบบ login หรือ sign up การจัดการกับข้อมูลหลังยืนยันตัวตน และมีการส่ง OTP เพื่อยืนยันและรีเซ็ตรหัส โดยใช้ React และ Node.js ในการพัฒนา',
     tool: [
       {
         "icon": html,
@@ -323,7 +345,7 @@ export const projectCard = [
       {
         icon: link_arrow_logo,
         text: "Project",
-        link: "/project/2",
+        link: "/project/3",
         target: "_self"
       },
       {
@@ -336,15 +358,200 @@ export const projectCard = [
     video: auth,
     year: '2026',
   },
+  {
+    name: 'Weathering',
+    description: 'Weather forecast app แอปที่ถูกสร้างขึ้นเพื่อใช้รายงานสภาพอากาศของแต่ละพื้นที่บนโลก โดยสามารถบอกสภาพอากาศ อุณหภูมิ ความชื้น ความกดอากาศ ทิศทางลมและเวลาที่พระอาทิตย์ขึ้นและตก',
+    tool: [
+      {
+        "icon": html,
+        "name": "HTML"
+      },
+      {
+        "icon": css,
+        "name": "CSS"
+      },
+      {
+        "icon": javaScript,
+        "name": "JavaScript"
+      },
+      {
+        "icon": react,
+        "name": "React"
+      },
+      {
+        "icon": tailwind,
+        "name": "Tailwind CSS"
+      },
+      {
+        "icon": copilot,
+        "name": "Github Copilot"
+      },
+    ],
+    buttonList: [
+      {
+        icon: link_logo,
+        text: "Live Demo",
+        link: "https://weathering-ecru.vercel.app",
+        target: "_blank"
+      },
+      {
+        icon: link_arrow_logo,
+        text: "Project",
+        link: "/project/4",
+        target: "_self"
+      },
+      {
+        icon: github_logo,
+        text: "Source Code",
+        link: 'https://github.com/Kamikazeed/Weathering',
+        target: "_blank"
+      },
+    ],
+    video: weathering,
+    year: '2025-2026',
+  },
+  {
+    name: 'QR Code Generator',
+    description: 'QR code generator แอปที่สามารถสร้างและดาวน์โหลดรูปภาพคิวอาร์โค้ดได้ ไม่ว่าจะเป็นคิวอาร์โค้ดสำหรับข้อความหรือลิงก์ URL',
+    tool: [
+      {
+        "icon": html,
+        "name": "HTML"
+      },
+      {
+        "icon": css,
+        "name": "CSS"
+      },
+      {
+        "icon": javaScript,
+        "name": "JavaScript"
+      },
+      {
+        "icon": react,
+        "name": "React"
+      },
+      {
+        "icon": tailwind,
+        "name": "Tailwind CSS"
+      },
+      {
+        "icon": copilot,
+        "name": "Github Copilot"
+      },
+    ],
+    buttonList: [
+      {
+        icon: link_logo,
+        text: "Live Demo",
+        link: "https://qr-generator-ruddy-eta.vercel.app",
+        target: "_blank"
+      },
+      {
+        icon: link_arrow_logo,
+        text: "Project",
+        link: "/project/5",
+        target: "_self"
+      },
+      {
+        icon: github_logo,
+        text: "Source Code",
+        link: 'https://github.com/Kamikazeed/QRcode_generator',
+        target: "_blank"
+      },
+    ],
+    video: qrGenerator,
+    year: '2025-2026',
+  },
 ]
 
 export const projectInfo = [
   {
-    logo: quickchat_logo,
-    name: 'QuickChat',
-    description: 'Chat App สามารถสนทนา ส่งข้อความและรูปภาพได้แบบเรียลไทม์ ใช้ React และ Tailwind ในการสร้างแอป และใช้ Socket.IO ในการทำระบบรับส่งข้อความแบบเรียลไทม์',
+    logo: portfolio_logo,
+    name: 'Torwai | Portfolio',
+    description: 'เว็บไซต์ Portfolio ส่วนตัวที่สร้างขึ้นเพื่อแสดงทักษะและผลงานที่เคยได้สร้างไว้ เว็บไซต์ใช้ Figma ในการออกแบบเพื่อให้เข้ากับทุกขนาดหน้าจอ ใช้ React และ Tailwind เป็นเครื่องมือหลักในการพัฒนา และใช้ Motion ในการทำแอนิเมชันต่างๆ ให้กับเว็บไซต์ โดยจะเก็บวิดีโอตัวอย่างของแต่ละผลงานไว้ใน Cloudinary',
     video: chatApp,
     buttonList: [
+      {
+        icon: figma,
+        text: "Figma",
+        link: 'https://www.figma.com/design/ssKHDghC8rimcZPJsYX0By/Portfolio?node-id=0-1&p=f&t=Nk4GkhFtciEyoige-0',
+        alt: "figma",
+        target: "_blank"
+      },
+      {
+        icon: github_logo,
+        text: "Source Code",
+        link: 'https://github.com/Kamikazeed/Torwai-Portfolio',
+        alt: "github",
+        target: "_blank"
+      },
+    ],
+    feature: [
+      {
+        title: 'Project Info',
+        detail: 'ใน section project ผู้ใช้สามารถเลือกดูข้อมูลเกี่ยวกับผลงาน แหล่งที่มาของโค้ด หรือทดลองใช้งานได้ตามต้องการ',
+      },
+      {
+        title: 'Section Scroll',
+        detail: 'ผู้ใช้สามารถเลือกกดปุ่มที่อยู่ขวาบนได้ แล้วระบบจะพาไปที่ส่วนที่ผู้ใช้ได้เลือก',
+      },
+      {
+        title: 'Send Email',
+        detail: 'ระบบที่ผู้ใช้จะสามารถส่งชื่อ ที่อยู่อีเมล และข้อความหาผมได้ โดยจะส่งเข้ามาทางอีเมลของผม',
+      },
+      {
+        title: 'Responsive Design',
+        detail: 'ใช้งานเว็บไซต์ได้อย่างราบรื่นกับทุกอุปกรณ์ ดีไซต์ที่ออกแบบมาเพื่อตอบสนองต่อขนาดหน้าจอต่างๆ',
+      },
+    ],
+    tech: [
+      {
+        "icon": html,
+        "name": "HTML"
+      },
+      {
+        "icon": css,
+        "name": "CSS"
+      },
+      {
+        "icon": javaScript,
+        "name": "JavaScript"
+      },
+      {
+        "icon": react,
+        "name": "React"
+      },
+      {
+        "icon": tailwind,
+        "name": "Tailwind CSS"
+      },
+      {
+        "icon": reactRouter,
+        "name": "React Router"
+      },
+      {
+        "icon": motion,
+        "name": "Motion"
+      },
+      {
+        "icon": cloudinary,
+        "name": "Cloudinary"
+      },
+    ],
+  },
+  {
+    logo: quickchat_logo,
+    name: 'QuickChat',
+    description: 'Chat App สามารถสนทนาส่งข้อความและรูปภาพได้แบบเรียลไทม์ โดยใช้ React และ Tailwind เป็นเครื่องมือหลักในการสร้างแอป และใช้ Socket.IO สำหรับการทำระบบรับส่งข้อความแบบเรียลไทม์ ในการจัดเก็บข้อมูลจะใช้เป็น Cloudinary เพื่อเก็บข้อมูลที่เป็นรูปภาพและ MongoDB เพื่อเก็บข้อมูลทั้งข้อมูลการสนทนาและข้อมูลของผู้ใช้',
+    video: chatApp,
+    buttonList: [
+      {
+        icon: link_logo,
+        text: "Live Demo",
+        link: "https://quickchat-chatapp.vercel.app",
+        alt: 'QuickChat',
+        target: "_blank"
+      },
       {
         icon: github_logo,
         text: "Source Code",
@@ -433,7 +640,7 @@ export const projectInfo = [
   {
     logo: spaceblog_logo,
     name: 'SpaceBlog',
-    description: 'Web Blog ที่ใช้ AI เข้ามาช่วยในการสร้าง blog โดยใช้ Gemini API มาช่วยในการคิด description ใช้ React และ Node.js ในการพัฒนา',
+    description: 'Web Blog ที่ใช้ AI เข้ามาช่วยในการสร้างบล็อก ใช้ Gemini API มาช่วยในการคิดคำอธิบายให้กับแต่ละบล็อกโดยอ้างอิงจากหัวข้อที่ได้ใส่ไปในบล็อก ใช้ React เป็นเครื่องมือหลักในการสร้างเว็บไซต์ฝั่ง Frontend ใช้ Node.js ในการพัฒนาฝั่ง Backend หรือเซิร์ฟเวอร์เพื่อให้ทำงานร่วมกับฝั่ง Frontend และฝั่ง mongoDB ที่เป็นฐานข้อมูล โดยจะเก็บรูปภาพของแต่ละบล็อกไว้ใน Imagekit ซึ่งเป็นแพลตฟอร์มสำหรับเก็บข้อมูลบนระบบคลาวด์',
     video: quickblog,
     buttonList: [
       {
@@ -547,7 +754,7 @@ export const projectInfo = [
   {
     logo: auth_logo,
     name: 'Auth',
-    description: 'Auth App ทำขึ้นเพื่อแสดงทักษะในการทำระบบ login หรือ sign up การจัดการกับข้อมูลหลังยืนยันตัวตน และมี่การส่ง OTP เพื่อยืนยันและรีเซ็ตรหัส ใช้ React และ Node.js ในการพัฒนา',
+    description: 'Auth App มีการใช้ React และ Tailwind พัฒนาฝั่ง Frontend และใช้ Node.js ในการพัฒนาฝั่ง Backend ภายในตัวแอปจะเป็นระบบ login ที่ผู้ใช้สามารถยืนยันตัวตนและรีเซ็ตรหัสผ่านได้ โดยจะมีการส่ง OTP ไปยังอีเมลที่ใช้เข้าสู่ระบบ',
     video: auth,
     buttonList: [
       {
@@ -561,15 +768,15 @@ export const projectInfo = [
     feature: [
       {
         title: 'Validation',
-        detail: 'การตรวจสอบข้อมูลก่อนเข้าสู่ระบบ',
+        detail: 'การตรวจสอบข้อมูลก่อนเข้าสู่ระบบ เช่น หากผู้ใช้มีการสร้างบัญชีไว้แล้วจะไม่สามารถสร้างบัญชีด้วยอีเมลเดิมได้',
       },
       {
         title: 'Verification',
-        detail: 'การยืนยันตัวตนผู้ใช้งานเพื่อเพิ่มความปลอดภัย',
+        detail: 'การส่ง OTP ไปยังอีเมลของผู้ใช้เพื่อยืนยันตัวตน',
       },
       {
         title: 'Reset Password',
-        detail: 'ระบบยืนยันเพื่อรีเซ็ตรหัสผ่าน',
+        detail: 'การส่ง OTP ไปยังอีเมลของผู้ใช้เพื่อรีเซ็ตรหัสผ่าน',
       },
       {
         title: 'Responsive Design',
@@ -616,6 +823,126 @@ export const projectInfo = [
       {
         "icon": expressJS,
         "name": "Express.js"
+      },
+    ],
+  },
+  {
+    logo: earth_logo,
+    name: 'Weathering',
+    description: 'Weather forecast app เป็นแอปที่ถูกสร้างขึ้นเพื่อใช้รายงานสภาพอากาศของแต่ละพื้นที่บนโลก โดยตัวแอปถูกพัฒนาขึ้นด้วย React และ Tailwind ในช่วงแรก หลังจากนั้นจึงมีการใช้ Github Copilot เข้ามาช่วยในการสร้างฟีเจอร์ใหม่ให้กับแอป ',
+    video: weathering,
+    buttonList: [
+      {
+        icon: link_logo,
+        text: "Live Demo",
+        link: "https://weathering-ecru.vercel.app",
+        alt: 'Weathering',
+        target: "_blank"
+      },
+      {
+        icon: github_logo,
+        text: "Source Code",
+        link: 'https://github.com/Kamikazeed/Auth-Torwai',
+        alt: 'GitHub',
+        target: "_blank"
+      },
+    ],
+    feature: [
+      {
+        title: 'City Search',
+        detail: 'สามารถตรวจสอบสภาพอากาศได้เพียงแค่ใช้ชื่อเมืองในการค้นหา',
+      },
+      {
+        title: 'Wind Direction Compass',
+        detail: 'ดูทิศทางลมจากเข็มทิศที่ช่วยให้ระบุทิศทางที่ลมพัดมา เพื่อให้เข้าใจรูปแบบสภาพอากาศได้ง่ายมากขึ้น',
+      },
+      {
+        title: 'Sunrise-Sunset Line',
+        detail: 'สามารถกูการเปลี่ยนแปลงของเวลาที่พระอาทิตย์ขึ้นและพระอาทิตย์ตกในแต่ละวันผ่านเส้นบอกเวลา',
+      },
+    ],
+    tech: [
+      {
+        "icon": html,
+        "name": "HTML"
+      },
+      {
+        "icon": css,
+        "name": "CSS"
+      },
+      {
+        "icon": javaScript,
+        "name": "JavaScript"
+      },
+      {
+        "icon": react,
+        "name": "React"
+      },
+      {
+        "icon": tailwind,
+        "name": "Tailwind CSS"
+      },
+      {
+        "icon": copilot,
+        "name": "Github Copilot"
+      },,
+    ],
+  },
+  {
+    logo: earth_logo,
+    name: 'QR Code Generator',
+    description: 'QR code generator แอปที่สามารถสร้างและดาวน์โหลดรูปภาพคิวอาร์โค้ดได้ ไม่ว่าจะเป็นคิวอาร์โค้ดสำหรับข้อความหรือลิงก์ URL โดยแอปมีการใช้ React Tailwind และ Github Copilot ในการพัฒนา',
+    video: qrGenerator,
+    buttonList: [
+      {
+        icon: link_logo,
+        text: "Live Demo",
+        link: "https://qr-generator-ruddy-eta.vercel.app",
+        alt: 'QR_Generator',
+        target: "_blank"
+      },
+      {
+        icon: github_logo,
+        text: "Source Code",
+        link: 'https://github.com/Kamikazeed/Auth-Torwai',
+        alt: 'GitHub',
+        target: "_blank"
+      },
+    ],
+    feature: [
+      {
+        title: 'Create a QR code',
+        detail: 'การสร้างคิวอาร์โค้ดสำหรับข้อความหรือลิงก์ URL',
+      },
+      {
+        title: 'Download Image',
+        detail: 'สามารถดาวน์โหลดรูปภาพคิวอาร์โค้ดที่สร้างขึ้นมาได้',
+      },
+    ],
+    tech: [
+      {
+        "icon": html,
+        "name": "HTML"
+      },
+      {
+        "icon": css,
+        "name": "CSS"
+      },
+      {
+        "icon": javaScript,
+        "name": "JavaScript"
+      },
+      {
+        "icon": react,
+        "name": "React"
+      },
+      {
+        "icon": tailwind,
+        "name": "Tailwind CSS"
+      },
+      {
+        "icon": copilot,
+        "name": "Github Copilot"
       },
     ],
   },

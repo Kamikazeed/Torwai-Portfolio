@@ -40,7 +40,7 @@ const Hero = () => {
         <div className={`flex flex-wrap w-full items-center gap-2 mt-2`}>
           {item.map((item, index) => (
             <motion.a className='flex items-center gap-2 primary-border px-1 py-[2px] text-primary text-sm font-medium cursor-pointer duration-100 hover:bg-secondary-bg/50 md:px-2 md:text-md' href={item.link} title='Facebook' aria-label='Facebook' target='_blank' variants={animation[1]} whileHover={{scale: 1.05}} whileTap={{scale: 0.95}} key={index}>
-              <img className='w-7 h-7' src={assets.facebook_logo} alt='facebook'/>
+              <img className='w-7 h-7' src={item.img} alt='facebook'/>
               <span>{item.text}</span>
             </motion.a>
           ))}
