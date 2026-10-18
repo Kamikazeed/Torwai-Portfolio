@@ -636,6 +636,16 @@ export const projectInfo = [
         "name": "Cloudinary"
       },
     ],
+    credential: [
+      {
+        email: 'user01@gmail.com',
+        password: 'demouser01',
+      },
+      {
+        email: 'user02@gmail.com',
+        password: 'demouser02',
+      },
+    ]
   },
   {
     logo: spaceblog_logo,
@@ -746,10 +756,12 @@ export const projectInfo = [
         "name": "Gemini"
       },
     ],
-    credential: {
-      email: 'admin@gmail.com',
-      password: 'admin01',
-    },
+    credential: [
+      {
+        email: 'admin@gmail.com',
+        password: 'admin01',
+      },
+    ]
   },
   {
     logo: auth_logo,

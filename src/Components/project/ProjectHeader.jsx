@@ -77,21 +77,23 @@ const ProjectHeader = () => {
               <p className='thai text-secondary leading-6 text-sm mt-2 md:text-md md:mt-3'>{data.description}</p>
               {data.credential && (
                 <div className='mt-4 py-4 px-3 rounded-md bg-secondary-bg/50'>
-                  <span className='block text-center text-primary text-md font-semibold md:text-lg'>Demo Credentials</span>
-                  <div className='flex flex-col gap-4 mt-4'>
-                    <div className='flex items-center justify-between'>
-                      <p className='text-primary '>Email : {data.credential.email}</p>
-                      <button className='flex items-center justify-center cursor-pointer' onClick={() => handleCopy(data.credential.email)}>
-                        <img className='w-7 h-7' src={assets.copy_icon} alt="copy_icon" />
-                      </button>
-                    </div>
-                    <div className='flex items-center justify-between'>
-                      <p className='text-primary '>Password : {data.credential.password}</p>
-                      <button className='flex items-center justify-center cursor-pointer' onClick={() => handleCopy(data.credential.password)}>
-                        <img className='w-7 h-7' src={assets.copy_icon} alt="copy_icon" />
-                      </button>
-                    </div>
-                  </div>
+                  <span className='block mb-2 text-center text-primary text-md font-semibold md:text-lg'>Demo Credentials</span>
+                    {data.credential.map((item, index) => (
+                      <div className='flex flex-col gap-3 py-3' key={index}>
+                        <div className='flex items-center justify-between'>
+                          <p className='text-primary '>Email : {item.email}</p>
+                          <button className='flex items-center justify-center cursor-pointer' onClick={() => handleCopy(item.email)}>
+                            <img className='w-7 h-7' src={assets.copy_icon} alt="copy_icon" />
+                          </button>
+                        </div>
+                        <div className='flex items-center justify-between'>
+                          <p className='text-primary '>Password : {item.password}</p>
+                          <button className='flex items-center justify-center cursor-pointer' onClick={() => handleCopy(item.password)}>
+                            <img className='w-7 h-7' src={assets.copy_icon} alt="copy_icon" />
+                          </button>
+                        </div>
+                      </div>
+                    ))}
                 </div>
               )}
             </div>
