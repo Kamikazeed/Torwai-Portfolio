@@ -13,11 +13,34 @@
 - **Send Email** : ระบบส่งข้อความหาเจ้าของเว็บไซต์ผ่านทางอีเมล
 - **Responsive Design** : เว็บไซต์ถูกออกแบบมาให้สามารถใช้งานได้กับทุกอุปกรณ์
 
+## Getting started
+ทำตามขั้นตอนเหล่านี้เพื่อเรียกใช้งานโปรเจกต์:
+
+### ขั้นตอน
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Kamikazeed/Torwai-Portfolio.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd Torwai-Portfolio
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
 ## Tech stack
 <div align="center">
   <img src="https://skillicons.dev/icons?i=vite" alt="Vite" width="48" height="48" />&emsp;
   <img src="https://skillicons.dev/icons?i=react" alt="React" width="48" height="48" />&emsp;
   <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind CSS" width="48" height="48" />&emsp;
+  <img src="https://raw.githubusercontent.com/Kamikazeed/Torwai-Icon/main/icons/motion.svg" alt="Motion" width="48" height="48" />&emsp;
+  <img src="https://raw.githubusercontent.com/Kamikazeed/Torwai-Icon/main/icons/cloudinary.svg" alt="Cloudinary" width="48" height="48" />&emsp;
 </div>
 
 ## Contact
@@ -26,4 +49,4 @@
 </div>
 
 ## License
-MIT
+โปรเจกต์นี้อยู่ภายใต้สัญญาอนุญาตแบบ MIT.
